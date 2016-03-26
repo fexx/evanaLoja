@@ -11,7 +11,7 @@ public class BotaoAzul extends Button{
 	private double altura;
 	private static BotaoAzul INSTANCE = null;
 	
-	public BotaoAzul() {
+	private BotaoAzul() {
 		this.configuracoesDefaultPvs();
 	}
 	

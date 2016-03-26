@@ -11,6 +11,12 @@ public class DiretorioArquivo {
 	
 	public static String CSS_MAIN = "main.css";
 	public static String CSS_BOTAO_AZUL = "componentes/botao_azul.css";
+	public static String CSS_ABA = "componentes/aba.css";
+	
+	public static String IMAGEM_HOME = "home.png";
+	public static String IMAGEM_ENGRENAGEM = "run.png";
+	
+	private DiretorioArquivo() {}
 	
 	public ImageView getUrlImagemView(String uri){
 		ImageView imageView = new ImageView();
