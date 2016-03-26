@@ -5,4 +5,28 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>evanaLoja</name>
   <description>Projeto de loja de roupas - Evana</description>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>16.0.1</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+	<finalName>${project.artifactId}-${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
 </project>
