@@ -1,0 +1,323 @@
+/*****************************************************************************
+* Label
+*****************************************************************************/
+
+.relogio{
+   -fx-fill: linear-gradient(cyan , dodgerblue);
+}
+
+.titled-address .label {
+  -fx-font: 28px Vivaldi;
+}
+
+.matricula{
+	 -fx-font-size: 18;
+}
+
+/*****************************************************************************
+* Border
+*****************************************************************************/
+
+.bordered-titled-title {
+  -fx-background-color: white;
+  -fx-translate-y: -16;
+}
+ 
+.bordered-titled-border {
+  -fx-content-display: top;
+  -fx-border-insets: 20 15 15 15;
+  -fx-background-color: white;
+  -fx-border-color: black;
+  -fx-border-width: 2;
+}
+ 
+.bordered-titled-content {
+  -fx-padding: 26 10 10 10;
+}
+
+.borda-azul{
+	-fx-border-color: blue;
+}
+
+.borda-vermelha{
+	-fx-border-color: #ff4d4d;
+}
+
+.borda-preta{
+	-fx-border-color: black;
+}
+
+
+/*****************************************************************************
+* Tool bar
+*****************************************************************************/
+.tool-bar {
+    -fx-font-size: 12pt;
+}
+
+.segmented-button-bar .button {
+    -fx-background-insets: 0, 1 1 1 0, 2 1 1 1;
+    -fx-background-radius: 0;
+    -fx-padding: 0.4em 1.833333em 0.4em 1.833333em;
+}
+ 
+.segmented-button-bar .button.first {
+    -fx-background-insets: 0, 1, 2 1 1 1;
+    -fx-background-radius: 3 0 0 3, 2 0 0 2, 2 0 0 2;
+}
+ 
+.segmented-button-bar .button.last {
+    -fx-background-insets: 0, 1 1 1 0, 2 1 1 1;
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 2 2 0;
+}
+ 
+.tool-bar .spacer {
+    -fx-padding: 0 5.417em 0 0;
+}
+
+/*****************************************************************************
+* textField custom
+*****************************************************************************/
+.text-field {
+	-fx-background-radius: 0px;
+}
+
+/*****************************************************************************
+* textField custom
+*****************************************************************************/
+
+.clearable-field .clear-button > .graphic {
+    -fx-scale-shape: false;
+    -fx-shape: "";
+    -fx-background-size: auto;
+    -fx-background-color: none!important;
+    -fx-padding: 0.0 15.5 0.0 15.0 !important;
+    -fx-background-position: center; 
+    -fx-background-image: url("../imagem/ic_cancel_grey600_24dp.png");
+    -fx-background-repeat: no-repeat;
+    -fx-cursor: hand;
+    -fx-width:100%;
+    -fx-height: auto;
+}
+
+
+.custom-text-field:text-field-has-focus {
+    -fx-highlight-fill: -fx-accent;
+    -fx-highlight-text-fill: white;
+    -fx-background-color: 
+        -fx-focus-color,
+        -fx-control-inner-background,
+        -fx-faint-focus-color,
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: -0.2, 1, -1.4, 3;
+    -fx-background-radius: 0, 0, 0, 0 !important;
+    -fx-prompt-text-fill: transparent;
+}
+
+
+/*****************************************************************************
+* Area de trabalho
+*****************************************************************************/
+.area-trabalho1{
+    -fx-background-image: url("../imagem/area-trabalho1.jpg");
+    -fx-background-repeat: stretch;   
+/*     -fx-background-size: 900 506; */
+    -fx-background-position: center center;
+}
+
+.area-trabalho2{
+    -fx-background-image: url("../imagem/area-trabalho2.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+.area-trabalho3{
+    -fx-background-image: url("../imagem/area-trabalho3.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+.area-trabalho4{
+    -fx-background-image: url("../imagem/area-trabalho4.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+.area-trabalho5{
+    -fx-background-image: url("../imagem/area-trabalho5.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+.area-trabalho7{
+    -fx-background-image: url("../imagem/area-trabalho7.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+.area-trabalho8{
+    -fx-background-image: url("../imagem/area-trabalho8.jpeg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+.area-trabalho9{
+    -fx-background-image: url("../imagem/area-trabalho9.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+}
+
+
+/*****************************************************************************
+* barra 
+*****************************************************************************/
+
+.teste {
+    -fx-base: -dark-black;
+    -fx-font-size: 20;
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+        linear-gradient(to bottom, -light-black 2%, -dark-black 98%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: .9em 0.416667em .9em 0.416667em;
+    -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);
+}
+
+
+#opcoes{
+	-fx-background-image: url("../imagem/ic_settings_white_24dp.png");
+	-fx-background-size: 36, 10;
+    -fx-background-repeat: no-repeat;
+}
+
+
+#opcoes:hover{
+	-fx-background-image: url("../imagem/ic_settings_blue_24dp.png");
+	 fx-background-size: 35,10;
+    -fx-background-repeat: no-repeat;
+}
+
+/*****************************************************************************
+* toggleButton
+*****************************************************************************/
+
+.toggle-button{
+	-fx-font-size: 14.0px;
+	-fx-base: #00a7d4;
+	-fx-background: #e5f3f6;
+	-fx-focus-color: #0093FF;
+	-fx-control-inner-background: #FFFFFF;
+	-fx-text-base-color: #FFFFFF;
+	-fx-background-color:#00a7d4;
+	-fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
+	-fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
+	-fx-background-insets: 0px;
+	-fx-background-radius: 0px;
+	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+	-fx-text-fill: -fx-text-base-color;
+	-fx-alignment: CENTER;
+	-fx-content-display: LEFT;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 3, 0.0 , 0 , 1 );
+}
+
+.toggle-button:selected {
+	-fx-focus-color: #FF0000;
+	-fx-background-color: #00a7d4, #0187ab;
+}
+
+
+/*****************************************************************************
+* ListView
+*****************************************************************************/
+
+.list-cell{
+	-fx-font-size: 14.0px;
+	-fx-base: #00a7d4;
+	-fx-background: #00a7d4;
+	-fx-focus-color: #0093FF;
+	-fx-control-inner-background: #FFFF;
+	-fx-text-base-color: #FFFF;
+	-fx-background-color:#00a7d4;
+	-fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
+	-fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
+	-fx-background-insets: 0px;
+	-fx-background-radius: 0px;
+	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+	-fx-text-fill: -fx-text-base-color;
+	-fx-content-display: LEFT;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 3, 0.0 , 0 , 1 );
+ 	-fx-cell-size: 70px;
+}
+
+.check-box .box{
+    -fx-font-size: 24;
+}
+
+.check-box:selected .mark {
+/*     -fx-background-color: #FFFFFF; */
+}
+
+.check-box .box {
+    -fx-background-color: #FFFFFF;
+}
+
+.check-box .mark {
+      -fx-shape:"M14.596,2.055L12.455,0C9.687,2.884,6.011,6.714,5.158,7.602L2.055,4.624L0,6.765l5.242,5.037l0.003-0.004
+    l0.003,0.004L14.596,2.055z";
+    -fx-scale-x: 2;
+    -fx-scale-y: 2;
+    -fx-translate-x: 5px;
+    -fx-translate-y: -3px;
+/*     -fx-background-color: #FFFFFF; */
+}
+
+.list-cell:filled{
+	-fx-font-size: 14.0px;
+	-fx-base: #00a7d4;
+	-fx-background: #00a7d4;
+	-fx-focus-color: #0093FF;
+	-fx-control-inner-background: #FFFF;
+	-fx-text-base-color: #FFFF;
+	-fx-background-color:#00a7d4;
+	-fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
+	-fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
+	-fx-background-insets: 0px;
+	-fx-background-radius: 0px;
+	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+	-fx-text-fill: -fx-text-base-color;
+	-fx-content-display: LEFT;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 3, 0.0 , 0 , 1 );
+}
+
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+	-fx-color:#00a7d4;
+	-fx-background-color:#00a7d4, #00a7d4;
+	-fx-background-insets: -1.4, 0, 1, 2;
+	-fx-background-radius: 0;
+}
+
+.list-cell:even {
+    -fx-background-color: #00a7d4;
+}
+
+.list-cell:filled:hover {
+    -fx-focus-color: #FF0000;
+	-fx-background-color: #00a7d4, #0187ab;
+}
+
+/*****************************************************************************
+* progressIndicator
+*****************************************************************************/
+
+.progress-indicator-blue {
+    -fx-progress-color: #0091EA;
+    -fx-font-size: 100px;
+    -fx-font-weight: bold;
+}
+
+.progress-indicator-orange {
+    -fx-progress-color: #E65100;
+    -fx-font-size: 100px;
+    -fx-font-weight: bold;
+}
