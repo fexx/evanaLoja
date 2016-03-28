@@ -12,6 +12,36 @@
 		<artifactId>guava</artifactId>
 		<version>16.0.1</version>
 	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate.javax.persistence</groupId>
+		<artifactId>hibernate-jpa-2.0-api</artifactId>
+		<version>1.0.1.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.lucee</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>8.3-606.jdbc4</version>
+	</dependency>
+	<dependency>
+		<groupId>org.jboss.spec.javax.transaction</groupId>
+		<artifactId>jboss-transaction-api_1.1_spec</artifactId>
+		<version>1.0.0.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>4.1.6.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate.javax.persistence</groupId>
+		<artifactId>hibernate-jpa-2.0-api</artifactId>
+		<version>1.0.1.Final</version>
+	</dependency>
   </dependencies>
   
   <build>
