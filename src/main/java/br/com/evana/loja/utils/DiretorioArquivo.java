@@ -9,12 +9,21 @@ public class DiretorioArquivo {
 	
 	private String dirBase = "/br/com/evana/loja/";
 	
+	//css
 	public static String CSS_MAIN = "main.css";
 	public static String CSS_BOTAO_AZUL = "componentes/botao_azul.css";
+	public static String CSS_BOTAO_BRANCO = "componentes/botao_branco.css";
 	public static String CSS_ABA = "componentes/aba.css";
 	
+	//icones
 	public static String IMAGEM_HOME = "home.png";
-	public static String IMAGEM_ENGRENAGEM = "run.png";
+	public static String IMAGEM_CABIDE = "cabide.png";
+	public static String IMAGEM_ENGRENAGEM = "settings.png";
+	public static String IMAGEM_ADD = "add.png";
+	public static String IMAGEM_PRODUTO = "product.png";
+	
+	//logos
+	public static String IMAGEM_LOGO_EVANA = "logo_evana.jpg";
 	
 	private DiretorioArquivo() {}
 	

@@ -5,23 +5,24 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 
-public class BotaoAzul extends Button{
+public class Botao extends Button{
 	
 	private double largura;
 	private double altura;
-	private static BotaoAzul INSTANCE = null;
+	private static Botao INSTANCE = null;
 	
-	private BotaoAzul() {
+	private Botao() {
 		this.configuracoesDefaultPvs();
 	}
 	
-	public BotaoAzul(String descricao) {
+	public Botao(String descricao) {
 		super(descricao);
 		this.configuracoesDefaultPvs();
+		this.setCursor(Cursor.HAND);
 		this.getStylesheets().add(getCss());
 	}
 	
-	public BotaoAzul(String descricao, Node node) {
+	public Botao(String descricao, Node node) {
 		super(descricao, node);
 		this.configuracoesDefaultPvs();
 	}
@@ -37,13 +38,13 @@ public class BotaoAzul extends Button{
 	}
 	
 	private String getCss() {
-		String css = DiretorioArquivo.getInstance().getUrlCSS(DiretorioArquivo.CSS_BOTAO_AZUL);
+		String css = DiretorioArquivo.getInstance().getUrlCSS(DiretorioArquivo.CSS_BOTAO_BRANCO);
 		return css;
 	}
 	
-	public static synchronized BotaoAzul getInstance() {
+	public static synchronized Botao getInstance() {
 		if(INSTANCE == null){
-			INSTANCE = new BotaoAzul();
+			INSTANCE = new Botao();
 		}
 		return INSTANCE;
 	}
