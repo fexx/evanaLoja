@@ -2,6 +2,7 @@ package br.com.evana.loja.ui;
 
 import org.controlsfx.control.textfield.TextFields;
 
+import br.com.evana.loja.view.ProdutoView;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -23,15 +24,16 @@ public class CadastroProdutoUI extends StackPane{
 	
 	
 	public CadastroProdutoUI() {
-		CadastroProdutoUI.setMargin(this, new Insets(10, 10, 10, 10));
 		this.setPadding(new Insets(10, 10, 10, 10));
 		
 		
 		organizaTextFields();
 		alinhaCampostexto.setSpacing(5); 
 		this.getChildren().add(alinhaCampostexto);
+		CadastroProdutoUI.setMargin(this, new Insets(555, 5, 5, 5));
+		this.setStyle(cssDefault);
+//		this.setPrefWidth();
 		this.getStyleClass().add("border");
-//		this.setStyle(cssDefault);
 	}
 
 	public static synchronized CadastroProdutoUI getinstance() {
@@ -47,6 +49,7 @@ public class CadastroProdutoUI extends StackPane{
 		
 		txtDescricao.getStyleClass().add("textField-img-descricao");
 		txtDescricao.setPromptText("Descricao do produto");
-		alinhaCampostexto.getChildren().addAll(txtCodigo, txtDescricao);
+		alinhaCampostexto.getChildren().addAll(lbCodigo, txtCodigo);
+		alinhaCampostexto.getChildren().addAll(lbDescricao, txtDescricao);
 	}
 }

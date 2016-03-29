@@ -35,7 +35,7 @@ public class ImagemProdutoUI extends BorderPane{
 		this.setTop(vbAcoes);
 		
 //        this.getStyleClass().add("borda");
-        ImagemProdutoUI.setMargin(this, new Insets(10, 10, 10, 10));
+        ImagemProdutoUI.setMargin(this, new Insets(5, 5, 5, 5));
         this.getStylesheets().add(DiretorioArquivo.getInstance().getUrlCSS(DiretorioArquivo.CSS_IMAGEM_PRODUTO_UI));
 	}
 	
