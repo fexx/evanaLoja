@@ -1,10 +1,13 @@
 package br.com.evana.loja.main;
 
+import br.com.evana.loja.componentes.BarraFerramentasInferior;
+import br.com.evana.loja.componentes.BarraFerramentasSuperior;
 import br.com.evana.loja.factory.TabFactory;
 import br.com.evana.loja.utils.DiretorioArquivo;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -16,7 +19,9 @@ public class Main extends Application{
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		borderPanePrincipal.setTop(TabFactory.getInstance());
+		borderPanePrincipal.setTop(BarraFerramentasSuperior.getInstance());
+		borderPanePrincipal.setCenter(TabFactory.getInstance());
+		borderPanePrincipal.setBottom(BarraFerramentasInferior.getInstance());
 		Group root = new Group();
 		scene = new Scene(root);
 		scene.getStylesheets().add(DiretorioArquivo.getInstance().getUrlCSS(DiretorioArquivo.CSS_MAIN));
@@ -27,6 +32,7 @@ public class Main extends Application{
 		stage.setMinHeight(500);
 		stage.setMinWidth(1000);
 		stage.setMaximized(true);
+//		stage.getIcons().add(new Image(getClass().getResourceAsStream("/br/com/evana/loja/imagem/"+DiretorioArquivo.IMAGEM_LOGO_EVANA)));
 		stage.show();
 	}
 	

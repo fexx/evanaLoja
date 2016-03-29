@@ -21,19 +21,19 @@ public class PersistenceController {
 	public void loadPersistenceContext(){
 		loadPersistenceContext(null);
 		
-		 EntityTransaction tx = persistenceContext.getTransaction();
-		 Produto produto = new Produto();
-		 produto.setNome("Saia longa");
-	        try {
-	            tx.begin();
-	            persistenceContext.persist(produto);
-	            tx.commit();
-	        } catch (Exception ex) {
-	            if (tx.isActive()) {
-	                tx.rollback();
-	            }
-	            throw new RuntimeException(ex);
-	        }
+//		 EntityTransaction tx = persistenceContext.getTransaction();
+//		 Produto produto = new Produto();
+//		 produto.setNome("Saia longa");
+//	        try {
+//	            tx.begin();
+//	            persistenceContext.persist(produto);
+//	            tx.commit();
+//	        } catch (Exception ex) {
+//	            if (tx.isActive()) {
+//	                tx.rollback();
+//	            }
+//	            throw new RuntimeException(ex);
+//	        }
 	}
 	
 	protected void loadPersistenceContext(EntityManager persistenceContext){

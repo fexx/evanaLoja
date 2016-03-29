@@ -18,8 +18,19 @@ public class Produto {
 	@Column(name = "ID", columnDefinition = "serial")
 	private Long id;
 	
-	@Column(name = "NOME")
-	private String Nome;
+	@Column(name = "DESCRICAO")
+	private String descricao;
+	
+	@Column(name = "CODIGO_BARRA")
+	private String codigoBarra;
+	
+	private String precoCusto;
+	
+	private String precoVenda;
+	
+	private Categoria categoria;
+	
+	private TipoUnidade unidade;
 	
 	public Long getId() {
 		return id;
@@ -27,10 +38,5 @@ public class Produto {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return Nome;
-	}
-	public void setNome(String nome) {
-		Nome = nome;
-	}
+	
 }

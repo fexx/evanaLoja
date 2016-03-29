@@ -28,7 +28,7 @@ public class Botao extends Button{
 	}
 	
 	private void configuracoesDefaultPvs() {
-		this.setId("botao-azul");
+		this.setId("botao-branco");
 		this.setCursor(Cursor.HAND);
 		this.getStylesheets().add(getCss());
 	}
@@ -54,7 +54,7 @@ public class Botao extends Button{
 	}
 
 	public void setLargura(double largura) {
-		this.setWidth(largura);
+		this.setMinWidth(largura);
 		this.largura = largura;
 	}
 
@@ -63,7 +63,7 @@ public class Botao extends Button{
 	}
 	
 	public void setAltura(double altura) {
-		this.setHeight(largura);
+		this.setMinHeight(largura);
 		this.altura = altura;
 	}
 }

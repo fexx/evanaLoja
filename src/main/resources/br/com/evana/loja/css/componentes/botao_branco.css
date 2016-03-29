@@ -1,8 +1,8 @@
-#botao-azul {
+#botao-branco {
 	-fx-font-size: 15.0px;
 	-fx-base: #F7F7F7;
 	-fx-background: #e5f3f6;
-	-fx-focus-color: #F7F7F7;
+	-fx-focus-color: #d4d4d4;
 	-fx-control-inner-background: #828282;
 	-fx-text-base-color: #828282;
 	-fx-background-color:#F7F7F7;
@@ -18,14 +18,17 @@
 /* 	-fx-font-weight: bold; */
 }
 
-#botao-azul:focused {
-	-fx-color:#FFFFFF;
-	-fx-background-color:#EEEEEE, #EEEEEE;
+#botao-branco:focused {
+	-fx-color:#F7F7F7;
+	-fx-background-color:#F7F7F7, #F7F7F7;
 	-fx-background-insets: -1.4, 0, 1, 2;
 	-fx-background-radius: 0;
+	
+	-fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
+	-fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
 }
 
-#botao-azul:hover {
-	-fx-focus-color: #FFFFFF;
-	-fx-background-color: #EEEEEE, #EEEEEE;
+#botao-branco:hover {
+	-fx-focus-color: #FF0000;
+	-fx-background-color: #F7F7F7, #e6e7e8;
 }

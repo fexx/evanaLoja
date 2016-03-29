@@ -42,6 +42,11 @@
 		<artifactId>hibernate-jpa-2.0-api</artifactId>
 		<version>1.0.1.Final</version>
 	</dependency>
+	<dependency>
+		<groupId>org.controlsfx</groupId>
+		<artifactId>controlsfx</artifactId>
+		<version>8.40.9</version>
+	</dependency>
   </dependencies>
   
   <build>
