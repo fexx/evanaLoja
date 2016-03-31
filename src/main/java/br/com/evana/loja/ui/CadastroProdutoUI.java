@@ -69,12 +69,12 @@ public class CadastroProdutoUI extends VBox{
 		txtDescricao.setMinWidth(50);
 		
 		
-		txtPrecoCusto.getStyleClass().add("textField-img-descricao");
+		txtPrecoCusto.getStyleClass().add("textField-img-cifrao");
 		txtPrecoCusto.setPromptText("Preco de custo");
 		txtPrecoCusto.setMinWidth(50);
 		txtPrecoCusto.setText("0");
 		
-		txtPrecoVenda.getStyleClass().add("textField-img-descricao");
+		txtPrecoVenda.getStyleClass().add("textField-img-cifrao");
 		txtPrecoVenda.setPromptText("Preco de venda");
 		txtPrecoVenda.setMinWidth(50);
 		txtPrecoVenda.setText("0");
