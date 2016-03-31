@@ -26,6 +26,45 @@
 .text-field:focused{
 }
 
+/*****************************************************************************
+* combocCheckBox
+*****************************************************************************/
+.combo-box {
+	-fx-font-size: 15.0px;
+	-fx-base: #F7F7F7;
+	-fx-background: #e5f3f6;
+	-fx-focus-color: #d4d4d4;
+	-fx-control-inner-background: #F7F7F7;
+	-fx-text-base-color: #828282;
+	-fx-background-color:#F7F7F7;
+	-fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
+	-fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
+	-fx-background-insets: 0px;
+	-fx-background-radius: 0px;
+	-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+	-fx-text-fill: -fx-text-base-color;
+	-fx-alignment: CENTER;
+	-fx-content-display: LEFT;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 3, 0.0 , 0 , 1 );
+	-fx-background-color: -fx-box-border, -fx-control-inner-background;
+/* 	-fx-font-weight: bold; */
+}
+
+.combo-box:focused {
+	-fx-color:#F7F7F7;
+	-fx-background-color:#F7F7F7, #F7F7F7;
+	-fx-background-insets: -1.4, 0, 1, 2;
+	-fx-background-radius: 0;
+	
+	-fx-inner-border: linear-gradient(to bottom, derive(-fx-color,73.6%) 0%, derive(-fx-color,29.200000000000003%) 100%);
+	-fx-body-color: linear-gradient( to bottom, derive(-fx-color, 34.0%) 0%, derive(-fx-color, -18.0%) 100%);
+}
+
+.combo-box:hover {
+	-fx-focus-color: #FF0000;
+	-fx-background-color: #F7F7F7, #e6e7e8;
+}
+
 
 /*****************************************************************************
 * progressIndicator
@@ -102,4 +141,16 @@
   -fx-background-repeat: no-repeat;
   -fx-background-position: left center;
    -fx-padding: 7 0 7 45;
+}
+
+.positivo{
+	-fx-text-fill: green;
+}
+
+.igual{
+	-fx-text-fill: black;
+}
+
+.negativo{
+	-fx-text-fill: red;
 }

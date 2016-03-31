@@ -1,13 +1,9 @@
 package br.com.evana.loja.ui;
 
-import org.controlsfx.control.textfield.TextFields;
-
 import br.com.evana.loja.componentes.Botao;
 import br.com.evana.loja.utils.DiretorioArquivo;
 import javafx.geometry.Insets;
-import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
@@ -16,7 +12,6 @@ public class ImagemProdutoUI extends VBox{
 	private static ImagemProdutoUI INSTANCE = null;
 	
 	public ImagemProdutoUI() {
-		HBox txtAndBt = new HBox(5);
 		
 		StackPane stpPainelImagem = new StackPane();
 		ImageView urlImagemView = DiretorioArquivo.getInstance().getUrlImagemView(DiretorioArquivo.IMAGEM_SEM_IMAGEM);
@@ -24,23 +19,20 @@ public class ImagemProdutoUI extends VBox{
 		urlImagemView.setFitHeight(100);
 		stpPainelImagem.getChildren().add(urlImagemView);
 		
-		stpPainelImagem.getStyleClass().add("borda");
-		
-		Botao botao = new Botao("...");
+		Botao botao = new Botao("Carregar imagens...");
 		botao.setMinHeight(35);
-		TextField txtCarregarImagem = TextFields.createClearableTextField();
-		txtCarregarImagem.getStyleClass().add("textField-img-picture");
-		txtAndBt.getChildren().addAll(txtCarregarImagem, botao);
 		
+		botao.prefWidthProperty().bind(this.widthProperty());
+		
+		stpPainelImagem.setStyle("-fx-background-color: #FFFFFF;");
 		stpPainelImagem.setPrefSize(500, 200);
 		this.getChildren().add(stpPainelImagem);
-		this.getChildren().add(txtAndBt);
+		this.getChildren().add(botao);
+		this.setPadding(new Insets(10));
 		
-		
-        this.getStyleClass().add("borda");
+        this.getStyleClass().add("border");
         ImagemProdutoUI.setMargin(this, new Insets(5, 5, 5, 5));
         this.getStylesheets().add(DiretorioArquivo.getInstance().getUrlCSS(DiretorioArquivo.CSS_IMAGEM_PRODUTO_UI));
-
 	}
 	
 	public static synchronized ImagemProdutoUI getInstance(){

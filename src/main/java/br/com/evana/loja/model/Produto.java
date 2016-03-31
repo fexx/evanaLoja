@@ -18,11 +18,11 @@ public class Produto {
 	@Column(name = "ID", columnDefinition = "serial")
 	private Long id;
 	
-	@Column(name = "DESCRICAO")
-	private String descricao;
-	
 	@Column(name = "CODIGO_BARRA")
 	private String codigoBarra;
+	
+	@Column(name = "DESCRICAO")
+	private String descricao;
 	
 	private String precoCusto;
 	

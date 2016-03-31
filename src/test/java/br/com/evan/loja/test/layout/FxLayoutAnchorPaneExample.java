@@ -1,12 +1,13 @@
+package br.com.evan.loja.test.layout;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class FxLayoutGridPaneExample extends Application
+public class FxLayoutAnchorPaneExample extends Application
 {
 	public static void main(String[] args) 
 	{
@@ -36,41 +37,43 @@ public class FxLayoutGridPaneExample extends Application
 		Button loginBtn = new Button("Login");
 		// Set the position of the Button
 		loginBtn.relocate(420, 10);
+				
+		// Anchor the Name Label to the Left Edge
+		AnchorPane.setLeftAnchor(nameLbl, 0.0);
+		// Anchor the Name Field 50px from the Left Edge
+		AnchorPane.setLeftAnchor(nameFld, 50.0);
+		// Anchor the Password Label 150px from the Right Edge
+		AnchorPane.setRightAnchor(passwordLbl, 150.0);
+		// Anchor the Password Field to the Right Edge
+		AnchorPane.setRightAnchor(passwordFld, 0.0);
+		// Anchor the Login Button 50px from the Bottom Edge
+		AnchorPane.setBottomAnchor(loginBtn, 10.0);
+		// Create the AnchorPane
+		AnchorPane root = new AnchorPane();
 		
-		// Create the GridPane
-		GridPane root = new GridPane();
-		// Add the Name Label at column 0 and row 0
-		root.add(nameLbl, 0, 0);
-		// Add the Name Field at column 1 and row 0
-		root.add(nameFld, 1, 0);
-		// Add the Password Label at column 0 and row 1
-		root.add(passwordLbl, 0, 1);
-		// Add the Password Field at column 1 and row 1
-		root.add(passwordFld, 1, 1);
-		// Add the Login Button at column 0 and row 2
-		root.add(loginBtn, 0, 2);
-		
-		// Set the padding of the GridPane
+		// Set the padding of the AnchorPane
 		root.setStyle("-fx-padding: 10;");
-		// Set the border-style of the GridPane
+		// Set the border-style of the AnchorPane
 		root.setStyle("-fx-border-style: solid inside;");
-		// Set the border-width of the GridPane
+		// Set the border-width of the AnchorPane
 		root.setStyle("-fx-border-width: 2;");
-		// Set the border-insets of the GridPane
+		// Set the border-insets of the AnchorPane
 		root.setStyle("-fx-border-insets: 5;");
-		// Set the border-radius of the GridPane
+		// Set the border-radius of the AnchorPane
 		root.setStyle("-fx-border-radius: 5;");
-		// Set the border-color of the GridPane
-		root.setStyle("-fx-border-color: blue;");
-		// Set the size of the GridPane
-		root.setPrefSize(250, 250);
+		// Set the border-color of the AnchorPane
+		root.setStyle("-fx-border-color: blue;");		
+		// Set the size of the AnchorPane
+		root.setPrefSize(500, 200);
+		// Add the children to the AnchorPane
+		root.getChildren().addAll(nameLbl, nameFld, passwordLbl, passwordFld, loginBtn);
 		
 		// Create the Scene
 		Scene scene = new Scene(root);
 		// Add the scene to the Stage
 		stage.setScene(scene);
 		// Set the title of the Stage
-		stage.setTitle("A GridPane Example");
+		stage.setTitle("An AnchorPane Example");
 		// Display the Stage
 		stage.show();
 	}

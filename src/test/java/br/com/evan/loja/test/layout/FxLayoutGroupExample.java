@@ -1,3 +1,4 @@
+package br.com.evan.loja.test.layout;
 import javafx.application.Application;
 import javafx.beans.binding.NumberBinding;
 import javafx.scene.Scene;
