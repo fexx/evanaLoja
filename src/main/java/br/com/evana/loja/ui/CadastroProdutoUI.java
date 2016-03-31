@@ -68,11 +68,11 @@ public class CadastroProdutoUI extends VBox{
 		txtDescricao.setPromptText("Descricao do produto");
 		txtDescricao.setMinWidth(50);
 		
-		
 		txtPrecoCusto.getStyleClass().add("textField-img-cifrao");
 		txtPrecoCusto.setPromptText("Preco de custo");
 		txtPrecoCusto.setMinWidth(50);
 		txtPrecoCusto.setText("0");
+		MascarasUtils.monetaryField(txtPrecoCusto);
 		
 		txtPrecoVenda.getStyleClass().add("textField-img-cifrao");
 		txtPrecoVenda.setPromptText("Preco de venda");
@@ -116,8 +116,6 @@ public class CadastroProdutoUI extends VBox{
 		
 		hbAgrupaLabelCategoria.getChildren().addAll(lbCategoria, lbUnidade);
 		hbAgrupaCbckUnidade.getChildren().addAll(cbckCategoria, cbckUnidade);
-		
-		
 		
 		
 		alinhaCampostexto.getChildren().addAll(hbAgrupaLabelPrecoCustoPrecoVenda, hbAgrupaTxtPrecoCustoPrecoVenda);
