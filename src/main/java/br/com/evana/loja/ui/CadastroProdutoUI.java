@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -24,11 +25,15 @@ public class CadastroProdutoUI extends VBox{
 	private Label lbPrecoVenda = new Label("Preço venda");
 	private Label lbCategoria = new Label("Categoria");
 	private Label lbUnidade = new Label("Unidade");
+	private Label lbObservacoes = new Label("Observações");
 	
 	private TextField txtCodigo = TextFields.createClearableTextField();
 	private TextField txtDescricao = TextFields.createClearableTextField();
 	private TextField txtPrecoCusto = TextFields.createClearableTextField();
 	private TextField txtPrecoVenda = TextFields.createClearableTextField();
+	private TextArea txtAreaObservacoes = new TextArea();
+	
+	
 	private ComboBox<String> cbckCategoria = new ComboBox<String>();
 	private ComboBox<String> cbckUnidade = new ComboBox<String>();
 	
@@ -59,6 +64,8 @@ public class CadastroProdutoUI extends VBox{
 		
 		HBox hbAgrupaLabelCategoria = new HBox(50);
 		HBox hbAgrupaCbckUnidade = new HBox(50);
+		
+//		txtAreaObservacoes.setPromptText("Observações");
 		
 		txtCodigo.getStyleClass().add("textField-img");
 		txtCodigo.setPromptText("Código de barras");
@@ -120,6 +127,7 @@ public class CadastroProdutoUI extends VBox{
 		
 		alinhaCampostexto.getChildren().addAll(hbAgrupaLabelPrecoCustoPrecoVenda, hbAgrupaTxtPrecoCustoPrecoVenda);
 		alinhaCampostexto.getChildren().addAll(hbAgrupaLabelCategoria, hbAgrupaCbckUnidade);
+		alinhaCampostexto.getChildren().addAll(lbObservacoes, txtAreaObservacoes);
 	}
 	
 }
