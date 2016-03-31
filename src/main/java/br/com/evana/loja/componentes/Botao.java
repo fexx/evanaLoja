@@ -19,6 +19,8 @@ public class Botao extends Button{
 		super(descricao);
 		this.configuracoesDefaultPvs();
 		this.setCursor(Cursor.HAND);
+		this.setMinHeight(35);
+		this.setPrefWidth(150);
 		this.getStylesheets().add(getCss());
 	}
 	

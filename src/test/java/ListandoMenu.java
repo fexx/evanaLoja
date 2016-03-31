@@ -1,16 +1,21 @@
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class ListandoMenu extends Application {
 
@@ -45,20 +50,52 @@ public class ListandoMenu extends Application {
 		
 		Button bt = new Button("Clique");
 		
-		bt.setOnMouseClicked(new EventHandler<Event>() {
+		
+		 VBox vBox = new VBox();
+		bt.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent t) {
+                
+                final Stage stage = new Stage();
+                Group rootGroup = new Group();
+                Scene scene = new Scene(rootGroup, 200, 200, Color.TRANSPARENT);
+                stage.setScene(scene);
+                stage.centerOnScreen();
+    			stage.setMinWidth(300);
+    			stage.setMinHeight(500);
+                stage.show();
 
-			@Override
-			public void handle(Event event) {
-				for (int i = 0; i < mBar.getMenus().size(); i++) {
-						Menu menu = mBar.getMenus().get(i);
-						System.out.println("Menu: "+menu.getText());
-						for (int j = 0; j < menu.getItems().size(); j++) {
-							MenuItem menuItem = menu.getItems().get(j);
-							System.out.println("--Item do menu: "+menuItem.getText());
-						}
-				}
-			}
-		});
+               
+                Button clique = new Button("Listar menus");
+                clique.setOnAction(new EventHandler<ActionEvent>() {
+                    public void handle(ActionEvent event) {
+								
+                    	clique.setOnMouseClicked(new EventHandler<Event>() {
+						
+									@Override
+									public void handle(Event event) {
+										for (int i = 0; i < mBar.getMenus().size(); i++) {
+												Menu menu = mBar.getMenus().get(i);
+												vBox.getChildren().add(new Label("Menu: "+String.valueOf(menu.getText())));
+												for (int j = 0; j < menu.getItems().size(); j++) {
+													MenuItem menuItem = menu.getItems().get(j);
+													vBox.getChildren().add(new Label("--Item do menu: "+String.valueOf(menuItem.getText())));
+												}
+										}
+									}
+								});
+                    }
+                });
+
+               
+                vBox.setSpacing(10);
+                vBox.setPadding(new Insets(60, 0, 0, 20));
+                vBox.setAlignment(Pos.TOP_CENTER);
+                vBox.getChildren().add(clique);
+
+                rootGroup.getChildren().addAll(vBox);
+            }
+        });
+		
 
 		alinhaGrade.getChildren().addAll(mBar, bt);
 

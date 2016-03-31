@@ -20,7 +20,6 @@ public class ImagemProdutoUI extends VBox{
 		stpPainelImagem.getChildren().add(urlImagemView);
 		
 		Botao botao = new Botao("Carregar imagens...");
-		botao.setMinHeight(35);
 		
 		botao.prefWidthProperty().bind(this.widthProperty());
 		

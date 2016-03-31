@@ -1,13 +1,13 @@
 package br.com.evana.loja.view;
 
+import br.com.evana.loja.ui.BotoesDefaultUI;
 import br.com.evana.loja.ui.CadastroProdutoUI;
 import br.com.evana.loja.ui.ImagemProdutoUI;
 import javafx.geometry.Insets;
-import javafx.scene.control.Label;
+import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -44,10 +44,11 @@ public class ProdutoView extends TabPane{
 		
 		CadastroProdutoUI.getInstance().prefWidthProperty().bind(this.widthProperty());
 		
+		
 		hbAlinhaImagemCadastro.getChildren().addAll(ImagemProdutoUI.getInstance(), CadastroProdutoUI.getInstance());
 		
 		vbAlinhaGrade.getChildren().add(tituloTela);
-		vbAlinhaGrade.getChildren().addAll(hbAlinhaImagemCadastro);
+		vbAlinhaGrade.getChildren().addAll(hbAlinhaImagemCadastro, BotoesDefaultUI.getInstance());
 		
 		tabCadastro.setContent(vbAlinhaGrade);
 		

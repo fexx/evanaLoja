@@ -22,6 +22,10 @@ public class DiretorioArquivo {
 	public static String IMAGEM_ENGRENAGEM = "settings.png";
 	public static String IMAGEM_ADD = "add.png";
 	public static String IMAGEM_PRODUTO = "product.png";
+	public static String IMAGEM_SALVAR = "save.png";
+	public static String IMAGEM_REMOVE = "remove.png";
+	public static String IMAGEM_EDITAR = "edit.png";
+	public static String IMAGEM_CANCELAR = "cancel.png";
 	
 	public static String IMAGEM_JAQUETA_FEMININA = "jaqueta-feminina.jpg";
 	public static String IMAGEM_SEM_IMAGEM = "no-image.png";
