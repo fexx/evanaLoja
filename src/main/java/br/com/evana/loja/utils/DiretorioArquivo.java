@@ -24,6 +24,7 @@ public class DiretorioArquivo {
 	public static String IMAGEM_PRODUTO = "product.png";
 	
 	public static String IMAGEM_JAQUETA_FEMININA = "jaqueta-feminina.jpg";
+	public static String IMAGEM_SEM_IMAGEM = "no-image.png";
 	
 	
 	
