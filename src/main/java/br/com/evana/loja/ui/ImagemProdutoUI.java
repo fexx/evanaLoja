@@ -25,12 +25,12 @@ public class ImagemProdutoUI extends VBox{
 		
 		stpPainelImagem.setStyle("-fx-background-color: #FFFFFF;");
 		stpPainelImagem.setPrefSize(500, 200);
-		this.getChildren().add(stpPainelImagem);
-		this.getChildren().add(botao);
-		this.setPadding(new Insets(10));
+		this.getChildren().addAll(stpPainelImagem, botao);
+		
 		
         this.getStyleClass().add("border");
         ImagemProdutoUI.setMargin(this, new Insets(5, 5, 5, 5));
+        this.setPadding(new Insets(10));
         this.getStylesheets().add(DiretorioArquivo.getInstance().getUrlCSS(DiretorioArquivo.CSS_IMAGEM_PRODUTO_UI));
 	}
 	

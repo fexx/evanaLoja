@@ -3,14 +3,12 @@ package br.com.evana.loja.view;
 import br.com.evana.loja.ui.BotoesDefaultUI;
 import br.com.evana.loja.ui.CadastroProdutoUI;
 import br.com.evana.loja.ui.ImagemProdutoUI;
+import br.com.evana.loja.ui.TituloPrincipalUI;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -24,37 +22,31 @@ public class ProdutoView extends TabPane{
 	Text titulo = fomatFonteTela("Cadastro de produtos");
 	private Tab tabConsulta = new Tab("Consulta");
 	private Tab tabCadastro = new Tab("Cadastro");
+	private BorderPane alinhaUI = new BorderPane();
 
 	public ProdutoView() {
-		ScrollPane sc = new ScrollPane();
 //		new PersistenceController().loadPersistenceContext();
 		this.setStyle("-fx-background-color: #FBFBFB;");
 		
 		vbAlinhaGrade.setStyle("-fx-background-color: #FBFBFB;");
 		vbAlinhaGrade.setPadding(new Insets(10, 10, 10, 10));
-		StackPane tituloTela = new StackPane();
-		tituloTela.getStyleClass().add("border");
-		tituloTela.setMinHeight(40);
 		
-		BorderPane bpTituloTela = new BorderPane();
-		bpTituloTela.setPadding(new Insets(10, 10, 10, 10));
-		StackPane.setMargin(tituloTela, new Insets(10, 10, 10, 10));
-		bpTituloTela.setLeft(titulo);
-		tituloTela.getChildren().add(bpTituloTela);
+		
+		
+		alinhaUI.setTop(new TituloPrincipalUI(titulo));
 		
 		CadastroProdutoUI.getInstance().prefWidthProperty().bind(this.widthProperty());
-		
-		
 		hbAlinhaImagemCadastro.getChildren().addAll(ImagemProdutoUI.getInstance(), CadastroProdutoUI.getInstance());
+		vbAlinhaGrade.getChildren().addAll(hbAlinhaImagemCadastro);
+		alinhaUI.setCenter(vbAlinhaGrade);
 		
-		vbAlinhaGrade.getChildren().add(tituloTela);
-		vbAlinhaGrade.getChildren().addAll(hbAlinhaImagemCadastro, BotoesDefaultUI.getInstance());
+		alinhaUI.setBottom(BotoesDefaultUI.getInstance());
 		
-		tabCadastro.setContent(vbAlinhaGrade);
+		tabCadastro.setContent(alinhaUI);
 		
 //		this.getTabs().add(tabConsulta);
 		this.getTabs().add(tabCadastro);
-		sc.setContent(this);
+//		sc.setContent(this);
 	}
 	
 	private Text fomatFonteTela(String texto) {
