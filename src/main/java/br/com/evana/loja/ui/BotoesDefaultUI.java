@@ -8,8 +8,6 @@ import javafx.scene.layout.HBox;
 
 public class BotoesDefaultUI extends HBox{
 	
-	private static BotoesDefaultUI INSTANCE = null;
-	
 	private Botao btNovo = new Botao("Novo");
 	private Botao btSalvar = new Botao("Salvar");
 	private Botao btCancelar = new Botao("Cancelar");
@@ -32,10 +30,4 @@ public class BotoesDefaultUI extends HBox{
 		this.setPadding(new Insets(20));
 	}
 	
-	public static synchronized BotoesDefaultUI getInstance(){
-		if(INSTANCE == null){
-			INSTANCE = new BotoesDefaultUI();
-		}
-		return INSTANCE;
-	}
 }

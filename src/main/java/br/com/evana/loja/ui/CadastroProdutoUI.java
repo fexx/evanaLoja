@@ -4,19 +4,15 @@ import org.controlsfx.control.textfield.TextFields;
 
 import br.com.evana.loja.utils.MascarasUtils;
 import javafx.geometry.Insets;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Screen;
 
 public class CadastroProdutoUI extends VBox{
 	
-	Screen screen = Screen.getPrimary();
-	Rectangle2D bounds = screen.getVisualBounds();
 	private static CadastroProdutoUI INSTANCE = null;
 	
 	private Label lbCodigo = new Label("Codigo");

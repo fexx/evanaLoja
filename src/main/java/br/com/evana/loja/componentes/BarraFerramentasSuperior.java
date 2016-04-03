@@ -7,9 +7,9 @@ public class BarraFerramentasSuperior extends StackPane{
 	private static BarraFerramentasSuperior INSTANCE = null;
 	
 	private BarraFerramentasSuperior() {
-		final String cssDefault = "-fx-border-color: black;-fx-border-insets: 5;-fx-border-width: 3;";
+		final String cssDefault = "-fx-border-color: black;-fx-border-insets: 1;-fx-border-width: 1;";
 		configuracoesDefaultPvs();
-		this.setStyle(cssDefault);
+//		this.setStyle(cssDefault);
 	}
 	
 	private void configuracoesDefaultPvs() {
