@@ -1,8 +1,14 @@
 package br.com.evana.loja.tabs;
 
+import com.apple.laf.AquaTabbedPaneCopyFromBasicUI.TabbedPaneLayout;
+
+import br.com.evana.loja.model.Produto;
 import br.com.evana.loja.ui.BotoesDefaultUI;
 import br.com.evana.loja.ui.TituloPrincipalUI;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -20,7 +26,7 @@ public class ConsultaProdutoTAB extends Tab{
 	public ConsultaProdutoTAB() {
 		alinhaUI.setTop(new TituloPrincipalUI(titulo));
 		
-		vbAlinhaGrade.getChildren().addAll(new GridPane());
+		vbAlinhaGrade.getChildren().addAll(tabela());
 		alinhaUI.setCenter(vbAlinhaGrade);
 		alinhaUI.setBottom(new BotoesDefaultUI());
 		
@@ -29,6 +35,15 @@ public class ConsultaProdutoTAB extends Tab{
 		this.setText("Consulta produto");
 	}
 
+	
+	private TableView tabela(){
+		TableView<Produto> tableView = new TableView<>();
+		ObservableList<Produto> listaProduto = FXCollections.observableArrayList();
+		
+		
+		tableView.setItems(listaProduto);
+		return tableView;
+	}
 	
 
 //	private static synchronized ConsultaProdutoTAB getInstance() {

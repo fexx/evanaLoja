@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import br.com.evana.loja.enums.TipoUnidade;
+
 @Entity
 @Table(name="PRODUTO")
 public class Produto {

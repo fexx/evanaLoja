@@ -1,4 +1,4 @@
-package br.com.evana.loja.model;
+package br.com.evana.loja.enums;
 
 public enum TipoUnidade {
 

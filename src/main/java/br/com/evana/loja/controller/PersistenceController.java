@@ -5,10 +5,11 @@ import javax.persistence.EntityTransaction;
 
 import org.apache.log4j.Logger;
 
+import br.com.evana.loja.action.AbstractController;
 import br.com.evana.loja.model.Produto;
 import br.com.evana.loja.utils.JPAUtil;
 
-public class PersistenceController {
+public class PersistenceController extends AbstractController{
 	
 	private Logger logger = Logger.getLogger(PersistenceController.class);
 	private EntityManager persistenceContext;
@@ -47,5 +48,9 @@ public class PersistenceController {
 			this.ownsPersistenceContext = false;
 		}
 	}
+	
+	 public EntityManager getPersistenceContext() {
+	        return this.persistenceContext;
+	    }
 
 }
